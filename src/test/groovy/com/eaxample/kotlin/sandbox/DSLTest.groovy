@@ -2,16 +2,21 @@ package com.eaxample.kotlin.sandbox
 
 import spock.lang.Specification
 
+import static com.eaxample.kotlin.sandbox.DomainSpecificLanguageKt.provideWorkout
+import static com.eaxample.kotlin.sandbox.Feeling.*
+
 class DSLTest extends Specification {
-    void setup() {
+
+    setup() {
+
     }
 
     def "Two activities in the workout"() {
         when:
-        Wrapper wrapper = new Wrapper()
-        def workout = wrapper.provideWorkout()
+        def workout = provideWorkout()
 
         then:
         workout.activities.size() == 2
+        workout.activities.first().exercises.first().feeling == OK
     }
 }

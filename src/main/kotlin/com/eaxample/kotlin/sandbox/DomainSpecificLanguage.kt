@@ -46,10 +46,10 @@ data class WorkUnit(var name: String = "", var work: Int = 0, var rest: Int = 0)
     }
 }
 
-class Wrapper {
+//class Wrapper {
 
 
-    fun provideWorkout(): Workout {
+   fun provideWorkout(): Workout {
         val workout = Workout()
         workout {
             name = "bsjd"
@@ -84,7 +84,7 @@ class Wrapper {
 
         return workout
     }
-}
+//}
 
 //fun workout (function: Workout.() -> Unit) : Workout{
 //    val address = Workout()
