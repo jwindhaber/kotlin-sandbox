@@ -23,9 +23,6 @@ data class Workout(var name: String = "", var activities: MutableList<Activity> 
         Activity().apply(lambda)
     }
 
-//    fun name(lambda: () -> String) {
-//        name = lambda()
-//    }
 }
 
 
@@ -51,8 +48,8 @@ data class WorkUnit(var name: String = "", var work: Int = 0, var rest: Int = 0)
 
    fun provideWorkout(): Workout {
         val workout = Workout()
-        workout {
-            name = "bsjd"
+       workout {
+            name =  "bsjd"
             activities {
                 activity {
                     name = "bsjd"
